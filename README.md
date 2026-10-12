@@ -1,9 +1,7 @@
-# Il Diploma Finale
-
-This is the final project.
+# Diploma Project
 
 ## What is included::
 
-HTML, CSS, JS(React, React router dom), GH-pages.
+HTML, CSS, JS(React, React router dom, react icons), GH-pages.
 
-**Note: it's under development.**
+**beta build**
