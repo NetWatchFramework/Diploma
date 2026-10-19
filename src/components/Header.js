@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { MdOutlineFavoriteBorder } from "react-icons/md"; 
+// установить https://www.npmjs.com/package/react-icons для иконок || база = https://react-icons.github.io/react-icons//
 
-function Header({ totalItems, onCartClick }){
+function Header({totalItems, onCartClick}){
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleMenu = () => setIsOpen(!isOpen)
@@ -9,23 +12,24 @@ function Header({ totalItems, onCartClick }){
   return(
     <header className="navbar">
       <div className="logo">
-        Achara<span>.Du</span>
+        {/* клик на лого возвращает на главную */}
+        <NavLink to="/" onClick={closeMenu}>Achara<span>.Du</span></NavLink>
       </div>
 
       <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
-        <li><a href="#hero" className="active" onClick={closeMenu}>Главная</a></li>
-        <li><a href="#menu" onClick={closeMenu}>Меню</a></li>
-        <li><a href="#contacts" onClick={closeMenu}>Контакты</a></li>
+        <li>
+          <NavLink to="/" end onClick={closeMenu}>Главная</NavLink>
+        </li>
+        <li>
+          <NavLink to="/about" onClick={closeMenu}>О нас</NavLink>
+        </li>
       </ul>
 
       <div className="header-actions">
-        {/*кнопка корзины, пока что эмодзи*/}
-        <button className="btn-cart-trigger" onClick={onCartClick} aria-label="Открыть корзину">
-          🛍️
-          {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
+        <button className="btn-cart-trigger" onClick={onCartClick}>
+          <MdOutlineFavoriteBorder /> {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
         </button>
-
-        <button className={`menu-toggle ${isOpen ? 'active' : ''}`} onClick={toggleMenu} aria-label="Открыть меню">
+        <button className={`menu-toggle ${isOpen ? 'active' : ''}`} onClick={toggleMenu}>
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
@@ -35,4 +39,4 @@ function Header({ totalItems, onCartClick }){
   )
 }
 
-export default Header
+export default Header;
