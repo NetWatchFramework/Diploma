@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect  } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
@@ -10,6 +10,12 @@ function App() {
   const [activeCategory, setActiveCategory] = useState('Все')
   const [cart, setCart] = useState([])
   const [isCartOpen, setIsCartOpen] = useState(false)
+
+  useEffect(() =>{
+    document.documentElement.style.scrollBehavior = 'auto'
+    window.scrollTo(0, 0)
+    document.documentElement.style.scrollBehavior = 'smooth'
+  },[])
 
   const addToCart = (dish) =>{
     setCart((prevCart) =>{
