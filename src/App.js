@@ -15,9 +15,9 @@ function App() {
     document.documentElement.style.scrollBehavior = 'auto'
     window.scrollTo(0, 0)
     document.documentElement.style.scrollBehavior = 'smooth'
-  },[])
+  },[]) //прокручиваем страницу в самый верх при первой загрузке компонента, временно отключая плавную анимацию скролла
 
-  const addToCart = (dish) =>{
+  const addToCart = (dish) =>{ // добавляем блюдо в корзину или увеличивает его количество, если оно там уже есть
     setCart((prevCart) =>{
       const existingItem = prevCart.find((item) => item.id === dish.id)
       if(existingItem){
@@ -30,7 +30,7 @@ function App() {
     })
   }
 
-  const updateCount = (id, delta) =>{
+  const updateCount = (id, delta) =>{ //работа с корзиной. изменяем кол-во товара в корзине
     setCart((prevCart) =>
       prevCart
         .map((item) => (item.id === id ? {...item, count: item.count + delta} : item))

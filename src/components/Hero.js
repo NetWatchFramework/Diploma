@@ -38,6 +38,7 @@ function Hero(){
           </button>
         </div>
       </div>
+      {/* убрать к релизу или позже и в app.css ==> .dish-img-placeholder */}
       <div className="hero-image-wrapper">
         <div className="hero-circle"></div> 
         <div className="dish-img-placeholder" style={{ height: '400px', width: '100%', borderRadius: '24px' }}>
