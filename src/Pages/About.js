@@ -4,8 +4,11 @@ function About(){
   return(
     <section className="about-page">
       <div className="about-header">
-        <h1>Наша <span>История(Ҳара ҳҭоурых)</span></h1>
-        <p>Вековые кулинарные традиции, передающиеся из поколения в поколение.</p>
+        <h1>Наша <span>История</span></h1>
+        <p>
+          Вековые кулинарные традиции, передающиеся из поколения в поколение. <br />
+        (Шәышықәсала иҟоу акулинартә традициақәа абиԥарақәа рҟынтә абиԥарақәа рахь ииасуан.)
+        </p>
       </div>
       <div className="about-grid">
         <div className="about-card">

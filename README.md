@@ -1,7 +1,7 @@
 # Diploma Project
 
-## What is included::
+## Что включено::
 
-HTML, CSS, JS(React, React router dom, react icons), GH-pages.
+HTML, CSS, JSON, JS(React, React router dom, react icons), GH-pages.
 
-**demo build**
+**релиз**
